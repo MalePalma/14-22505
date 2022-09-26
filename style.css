@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-p, h1, h2, h3, li, .btn {
+p, h1, h2, h3, li, .btn{
     font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
 
@@ -16,42 +16,56 @@ h1{
     margin: 25px 0 15px 0;
 }
 
-h2 {}
-h4 {}
+h2{
+ color: #36A0FF;
+}
 
-a {
+h4{
+    color:aliceblue
+}
+
+a{
     color: beige;
     text-decoration: none;
 }
 
-a:hover {
+a:hover{
     color: rgb(182, 182, 170);
     text-decoration: none;
 }
 
 /* MAIN NAV*/
 
-nav{
+header{
     background: #2fcdcd;
-    height: 80px;
     width: 100%;
 }
+
+nav{
+    height: 80px;
+    max-width: 940px;
+}
+
 .enlace{
     position: absolute;
     padding: 20px 50px;
 }
+
 .logo{
         height: 40px;
 }
+
 nav ul{
     float: right;
     margin-right: 20px;
 }
+
 nav ul li{
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
 }
+
 nav ul li a{
     color: #fff;
     font-size: 18px;
@@ -59,10 +73,12 @@ nav ul li a{
     border-radius: 3px;
     text-transform: uppercase;
 }
+
 li a.active, li a:hover{
     background: #000090;
     transition: .5s;
 }
+
 .checkbtn{
         font-size: 30px;
         color: #fff;
@@ -72,6 +88,7 @@ li a.active, li a:hover{
         cursor: pointer;
         display: none;
 }
+
 #check{
     display: none;
 }
@@ -82,15 +99,16 @@ li a.active, li a:hover{
     height: calc(100vh - 80px);
 }
 
-/* SECTION */
+/* MAIN CONTAINER */
 
-/* CONTAINER HOME */
 
-.home{
+.container{
     max-width: 840px;
     height: auto;
     margin: auto;
 }
+
+/* GRID CONTAINER HOME */
 
 .grid-container {
     display: grid;                           /*Convierte el contenedor en una grilla */
