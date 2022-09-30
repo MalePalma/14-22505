@@ -8,16 +8,29 @@
     box-sizing: border-box;
 }
 
-p, h1, h2, h3, li, .btn{
+body, p, h1, h2, h3, li, .btn{
     font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
 
 h1{
+    font-size: 30px;
     margin: 25px 0 15px 0;
+    color: #144E75;
+    font-weight: bolder;
+    padding-left: 10px; 
 }
 
 h2{
- color: #36A0FF;
+    font-size: 22px;
+    color:#1C6EA4;
+}
+
+h3{
+    font-size: 30px;
+    margin: 25px 0 15px 0;
+    color: #144E75;
+    font-weight: bolder;
+    padding-left: 10px; 
 }
 
 h4{
@@ -25,7 +38,7 @@ h4{
 }
 
 a{
-    color: beige;
+    color: #848775;
     text-decoration: none;
 }
 
@@ -37,13 +50,15 @@ a:hover{
 /* MAIN NAV*/
 
 header{
-    background: #2fcdcd;
+    border-top: 5px solid #fdd306;
+    border-bottom: 1px solid #b0b0b0;
     width: 100%;
 }
 
 nav{
     height: 80px;
     max-width: 940px;
+    margin: auto;
 }
 
 .enlace{
@@ -67,7 +82,7 @@ nav ul li{
 }
 
 nav ul li a{
-    color: #fff;
+    color: #333;
     font-size: 18px;
     padding: 7px 13px;
     border-radius: 3px;
@@ -75,13 +90,14 @@ nav ul li a{
 }
 
 li a.active, li a:hover{
-    background: #000090;
+    color: rgb(224, 224, 224);
+    background: #1C6EA4;
     transition: .5s;
 }
 
 .checkbtn{
         font-size: 30px;
-        color: #fff;
+        color: #144E75;
         float: right;
         line-height: 80px;
         margin-right: 40px;
@@ -115,16 +131,12 @@ li a.active, li a:hover{
     /* display: inline-grid; */
     grid-template-columns: auto auto auto ;   /*Forma en que se distribuyen los elementos*/
     gap: 10px;                               /*Espacios entre los hijos*/
-    background-color: lightseagreen;           /*Color de fondo del contenedor */
-    padding: 10px;                           /*Coloco un espacio alrededor del conjunto de hijos*/
-    border: 2px solid black;           /*El borde no se ve */
-    border-radius: 5px;
+    padding: 10px;                           /*Coloco un espacio alrededor del conjunto de hijos*/      /*El borde no se ve */
     margin-bottom: 25px;;
 }
 
 .grid-item {
     padding:10px;
-    border: 1px solid black;     /*Borde de los elementos hijos */
 }
 
 /* ELEMENTOS */
@@ -138,17 +150,17 @@ li a.active, li a:hover{
     text-decoration: none; 
     text-align: center;
     text-transform: none; 
-    background-color:grey; 
+    background-color:#1C6EA4; 
     display: block;}
     .VerMas:hover {
-    background: #1C6EA4; }
+    background: #144E75; }
     .VerMas:active {
     background: #144E75; }
 
 /* FOOTER*/
 
 footer{
-    background-color: #2c3e50;
+    background-color: #333;
 }
 
 .grid-footer {
@@ -161,10 +173,10 @@ footer{
     margin: auto;
 }
 
-footer, .grid-item {
+.grid-item-footer{
     padding:10px;
-    border: 1px solid black;     /*Borde de los elementos hijos */
 }
+
 
 /* HTML CONTACTO*/
 .bigicon {
@@ -198,7 +210,7 @@ footer, .grid-item {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #2c3e50;
+        background: #144E75;;
         top: 80px;
         left: -100%;
         text-align: center;
@@ -211,10 +223,11 @@ footer, .grid-item {
     }
     nav ul li a{
         font-size: 20px;
+        color: rgb(138, 138, 138);
     }
     li a:hover, li a.active{
         background: none;
-        color: red;
+        color: #fff;
     }
     #check:checked ~ ul{
         left:0;
