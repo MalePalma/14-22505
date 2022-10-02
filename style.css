@@ -23,7 +23,7 @@ h1{
 h2{
     font-size: 30px;
     color:#1C6EA4;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 h3{
@@ -39,8 +39,8 @@ h4{
 }
 
 p{
-    font-size: 16px;
-    color: #4e4e4e;
+    font-size: 20px;
+    color: #808080;
     font-weight:400;
     padding: 10px 0 10px 0px; 
 }
@@ -55,7 +55,8 @@ a:hover{
     text-decoration: none;
 }
 
-/* MAIN NAV*/
+
+/* --------------------------------------- MAIN NAV*/
 
 header{
     border-top: 5px solid #fdd306;
@@ -122,63 +123,14 @@ li a:hover{
 #check{
     display: none;
 }
-    section{
+/*    section{
     background: url(fondo.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
     height: calc(100vh - 80px);
-}
+}*/
 
-/* MAIN CONTAINER */
-
-
-.container{
-    max-width: 1140px;
-    height: auto;
-    margin: auto;
-}
-
-/* GRID CONTAINER HOME */
-
-.grid-container {
-    display: grid;                           /*Convierte el contenedor en una grilla */
-    grid-template-columns: 1fr 1fr 1fr ;   /*Forma en que se distribuyen los elementos*/
-    gap: 10px;                               /*Espacios entre los hijos*/
-    padding: 10px;                           /*Coloco un espacio alrededor del conjunto de hijos*/      /*El borde no se ve */
-    margin-bottom: 25px;
-}
-
-.grid-item {
-    padding:10px;
-    border: 1px solid #b0b0b0;
-    border-radius: 20px;
-}
-
-.grid-item img {
-    inline-size: 100%;
-    border-radius: 5px;
-    margin: 10px 0px;
-  } 
-
-/* ELEMENTOS */
-
-.btn, .VerMas {
-    color: rgb(255, 255, 255); 
-    font-size: 16px; 
-    line-height: 16px; 
-    padding: 10px; 
-    border-radius: 10px; 
-    text-decoration: none; 
-    text-align: center;
-    text-transform: none; 
-    background-color:#1C6EA4; 
-    display: block;}
-    .VerMas:hover {
-    background: #144E75; }
-    .VerMas:active {
-    background: #144E75; }
-
-/* FOOTER*/
+/* --------------------------------------- FOOTER*/
 
 footer{
     background-color: #333;
@@ -198,6 +150,114 @@ footer{
     padding:10px;
 }
 
+/* ELEMENTOS */
+
+.btn, .VerMas {
+    color: rgb(255, 255, 255); 
+    font-size: 18px; 
+    line-height: 20px; 
+    padding: 10px; 
+    border-radius: 10px; 
+    text-decoration: none; 
+    text-align: center;
+    text-transform: none; 
+    background-color:#1C6EA4; 
+    display: block;}
+    .VerMas:hover {
+    background: #144E75; }
+    .VerMas:active {
+    background: #144E75; }
+
+.encabezado{
+    width: 100%;
+}
+
+/* +++++++++++++++++++++++  HOME ++++++++++++++++++++++ */
+
+
+.container{
+    max-width: 1140px;
+    height: auto;
+    margin: auto;
+}
+
+/* GRID CONTAINER HOME */
+
+.grid-container {
+    display: grid;                           /*Convierte el contenedor en una grilla */
+    grid-template-columns: 1fr 1fr 1fr ;   /*Forma en que se distribuyen los elementos*/
+    gap: 20px;                               /*Espacios entre los hijos*/
+    padding: 20px;                           /*Coloco un espacio alrededor del conjunto de hijos*/      /*El borde no se ve */
+    margin-bottom: 25px;
+}
+
+.grid-item {
+    padding:15px;
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+}
+
+.grid-item img {
+    inline-size: 100%;
+    border-radius: 5px;
+    margin: 10px 0px;
+  } 
+
+
+/* +++++++++++++++++++++++  DESTINOS ++++++++++++++++++++++ */
+
+.grid-container-destino {
+    display: grid;                           /*Convierte el contenedor en una grilla */
+    grid-template-columns: 2fr 1fr ;         /*Forma en que se distribuyen los elementos*/
+    gap: 20px;                               /*Espacios entre los hijos*/
+    padding: 20px;                           /*Coloco un espacio alrededor del conjunto de hijos*/      /*El borde no se ve */
+    margin-bottom: 25px;
+}
+
+.grid-container-fauna-flora{
+    display: grid;                           /*Convierte el contenedor en una grilla */
+    grid-template-columns: 1fr 1fr 1fr ;     /*Forma en que se distribuyen los elementos*/
+    gap: 20px;                               /*Espacios entre los hijos*/
+    padding: 20px;                           /*Coloco un espacio alrededor del conjunto de hijos*/      /*El borde no se ve */
+    margin: 20px;
+}
+
+.fondo-gris {
+    background-color: #f1f1f1;
+    border-radius: 25px;
+}
+
+
+.grid-container-fauna-flora img{
+    border-radius: 50%;
+    max-width: 250px;
+}
+
+.descripcion {
+    background-color: #f1f1f1;
+    padding:15px;
+    border-radius: 10px;
+}
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item-fauna-flora {
+    padding:15px;
+    text-align: center;
+}
 
 /* HTML CONTACTO*/
 .bigicon {
@@ -206,7 +266,7 @@ footer{
 }
 
 
-/* ------ BREAKING POINT TABLET*/
+/* /////////////////////////////////////////////////////////////////////////////// BREAKING POINT TABLET*/
 
 @media (max-width: 952px){
 
@@ -217,9 +277,20 @@ footer{
     nav ul li a{
        font-size: 16px;
     }
+
+        /* DESTINOS  */
+        .grid-container-destino {
+            grid-template-columns: auto;   /*Forma en que se distribuyen los elementos*/
+        }
+
+        .grid-container-fauna-flora{
+            grid-template-columns: auto ;   /*Forma en que se distribuyen los elementos*/
+            border-radius: 0;
+        }
+    
 }
 
-/* ------ BREAKING POINT SMARTPHONE*/
+/* /////////////////////////////////////////////////////////////////////////////// BREAKING POINT SMARTPHONE*/
 
 @media (max-width: 858px){
 
@@ -254,12 +325,17 @@ footer{
         left:0;
     }
 
-    /* CONTAINER HOME */
+    /* HOME */
     .grid-container {
         grid-template-columns: auto;   /*Forma en que se distribuyen los elementos*/
     }
 
-    /* CONTAINER FOOTER*/
+    /* DESTINOS  */
+    .grid-container-destino {
+        grid-template-columns: auto;   /*Forma en que se distribuyen los elementos*/
+    }
+
+    /*  FOOTER*/
     .grid-footer {
         grid-template-columns: auto;   /*Forma en que se distribuyen los elementos*/
     }
