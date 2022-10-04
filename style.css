@@ -1,127 +1,133 @@
 /* SELECTOR UNIVERSAL*/
 
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-body, p, h1, h2, h3, li, .btn{
-    font-family: 'Lato', Arial, Helvetica, sans-serif;
+
+body,
+p,
+h1,
+h2,
+h3,
+li,
+.btn {
+  font-family: "Lato", Arial, Helvetica, sans-serif;
 }
 
-h1{
-    font-size: 40px;
-    margin: 25px 0 0 0;
-    color: #144E75;
-    font-weight: 900;
-    padding: 20px 0 10px 20px; 
+h1 {
+  font-size: 40px;
+  margin: 25px 0 0 0;
+  color: #144e75;
+  font-weight: 900;
+  padding: 20px 0 10px 20px;
 }
 
-h2{
-    font-size: 30px;
-    color:#1C6EA4;
-    font-weight: 600;
+h2 {
+  font-size: 30px;
+  color: #1c6ea4;
+  font-weight: 600;
 }
 
-h3{
-    font-size: 35px;
-    margin: 25px 0 15px 0;
-    color: #144E75;
-    font-weight: 700;
-    padding-left: 20px; 
+h3 {
+  font-size: 35px;
+  margin: 25px 0 15px 0;
+  color: #144e75;
+  font-weight: 700;
+  padding-left: 20px;
 }
 
-h4{
-    color:aliceblue
+h4 {
+  color: aliceblue;
 }
 
-p{
-    font-size: 20px;
-    color: #808080;
-    font-weight:400;
-    padding: 10px 0 10px 0px; 
+p {
+  font-size: 20px;
+  color: #808080;
+  font-weight: 400;
+  padding: 10px 0 10px 0px;
 }
 
-a{
-    color: #848775;
-    text-decoration: none;
+a {
+  color: #848775;
+  text-decoration: none;
 }
 
-a:hover{
-    color: rgb(182, 182, 170);
-    text-decoration: none;
+a:hover {
+  color: rgb(182, 182, 170);
+  text-decoration: none;
 }
-
 
 /* --------------------------------------- MAIN NAV*/
 
-header{
-    border-top: 5px solid #fdd306;
-    border-bottom: 1px solid #b0b0b0;
-    width: 100%;
+header {
+  /* border-top: 5px solid #fdd306;*/
+  border-bottom: 1px solid #b0b0b0;
+  width: 100%;
 }
 
-nav{
-    height: 80px;
-    max-width: 1140px;
-    margin: auto;
+nav {
+  height: 80px;
+  max-width: 1140px;
+  margin: auto;
 }
 
-.enlace{
-    position: absolute;
-    padding: 20px;
+.enlace {
+  position: absolute;
+  padding: 20px;
 }
 
-.logo{
-        height: 50px;
+.logo {
+  height: 50px;
 }
 
-nav ul{
-    float: right;
-    margin-right: 20px;
+nav ul {
+  float: right;
+  margin-right: 20px;
 }
 
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
 }
 
-nav ul li a{
-    color: #333;
-    font-size: 16px;
-    padding: 7px 13px;
-    border-radius: 25px;
-    text-transform: uppercase;
+nav ul li a {
+  color: #333;
+  font-size: 16px;
+  padding: 7px 13px;
+  border-radius: 25px;
+  text-transform: uppercase;
 }
 
-li a.active{
-    color: rgb(248, 248, 248);
-    background: #1C6EA4;
-    transition: .5s;
+li a.active {
+  color: rgb(248, 248, 248);
+  background: #1c6ea4;
+  transition: 0.5s;
 }
 
-li a:hover{
-    color: rgb(224, 224, 224);
-    background: #4e4e4e;
-    transition: .5s;
+li a:hover {
+  color: rgb(224, 224, 224);
+  background: #4e4e4e;
+  transition: 0.5s;
 }
 
-.checkbtn{
-        font-size: 30px;
-        color: #144E75;
-        float: right;
-        line-height: 80px;
-        margin-right: 40px;
-        cursor: pointer;
-        display: none;
+.checkbtn {
+  font-size: 30px;
+  color: #144e75;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
 }
 
-#check{
-    display: none;
+#check {
+  display: none;
 }
 /*    section{
     background: url(fondo.jpg) no-repeat;
@@ -132,211 +138,243 @@ li a:hover{
 
 /* --------------------------------------- FOOTER*/
 
-footer{
-    background-color: #333;
+footer {
+  background-color: #333;
 }
 
 .grid-footer {
-    display: grid;                           /*Convierte el contenedor en una grilla */
-    /* display: inline-grid; */
-    grid-template-columns: auto auto auto ;   /*Forma en que se distribuyen los elementos*/
-    gap: 10px;                               /*Espacios entre los hijos*/
-    padding: 10px;                           /*Coloco un espacio alrededor del conjunto de hijos*/
-    max-width: 1140px;
-    margin: auto;
+  display: grid; /*Convierte el contenedor en una grilla */
+  /* display: inline-grid; */
+  grid-template-columns: auto auto auto; /*Forma en que se distribuyen los elementos*/
+  gap: 10px; /*Espacios entre los hijos*/
+  padding: 10px; /*Coloco un espacio alrededor del conjunto de hijos*/
+  max-width: 1140px;
+  margin: auto;
 }
 
-.grid-item-footer{
-    padding:10px;
+.grid-item-footer {
+  padding: 10px;
 }
 
 /* ELEMENTOS */
 
-.btn, .VerMas {
-    color: rgb(255, 255, 255); 
-    font-size: 18px; 
-    line-height: 20px; 
-    padding: 10px; 
-    border-radius: 10px; 
-    text-decoration: none; 
-    text-align: center;
-    text-transform: none; 
-    background-color:#1C6EA4; 
-    display: block;}
-    .VerMas:hover {
-    background: #144E75; }
-    .VerMas:active {
-    background: #144E75; }
+.btn,
+.VerMas {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  line-height: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: none;
+  background-color: #1c6ea4;
+  display: block;
+}
+.VerMas:hover {
+  background: #144e75;
+}
+.VerMas:active {
+  background: #144e75;
+}
 
-.encabezado{
-    width: 100%;
+.encabezado {
+  width: 100%;
 }
 
 /* +++++++++++++++++++++++  HOME ++++++++++++++++++++++ */
 
-
-.container{
-    max-width: 1140px;
-    height: auto;
-    margin: auto;
+.container {
+  max-width: 1140px;
+  height: auto;
+  margin: auto;
 }
 
 /* GRID CONTAINER HOME */
 
 .grid-container {
-    display: grid;                           /*Convierte el contenedor en una grilla */
-    grid-template-columns: 1fr 1fr 1fr ;   /*Forma en que se distribuyen los elementos*/
-    gap: 20px;                               /*Espacios entre los hijos*/
-    padding: 20px;                           /*Coloco un espacio alrededor del conjunto de hijos*/      /*El borde no se ve */
-    margin-bottom: 25px;
+  display: grid; /*Convierte el contenedor en una grilla */
+  grid-template-columns: 1fr 1fr 1fr; /*Forma en que se distribuyen los elementos*/
+  gap: 20px; /*Espacios entre los hijos*/
+  padding: 20px; /*Coloco un espacio alrededor del conjunto de hijos*/ /*El borde no se ve */
+  margin-bottom: 25px;
 }
 
 .grid-item {
-    padding:15px;
-    border: 1px solid #d8d8d8;
-    border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
 }
 
 .grid-item img {
-    inline-size: 100%;
-    border-radius: 5px;
-    margin: 10px 0px;
-  } 
-
+  inline-size: 100%;
+  border-radius: 5px;
+  margin: 10px 0px;
+}
 
 /* +++++++++++++++++++++++  DESTINOS ++++++++++++++++++++++ */
 
 .grid-container-destino {
-    display: grid;                           /*Convierte el contenedor en una grilla */
-    grid-template-columns: 2fr 1fr ;         /*Forma en que se distribuyen los elementos*/
-    gap: 20px;                               /*Espacios entre los hijos*/
-    padding: 20px;                           /*Coloco un espacio alrededor del conjunto de hijos*/      /*El borde no se ve */
-    margin-bottom: 25px;
+  display: grid; /*Convierte el contenedor en una grilla */
+  grid-template-columns: 2fr 1fr; /*Forma en que se distribuyen los elementos*/
+  gap: 20px; /*Espacios entre los hijos*/
+  padding: 20px; /*Coloco un espacio alrededor del conjunto de hijos*/ /*El borde no se ve */
+  margin-bottom: 25px;
 }
 
-.grid-container-fauna-flora{
-    display: grid;                           /*Convierte el contenedor en una grilla */
-    grid-template-columns: 1fr 1fr 1fr ;     /*Forma en que se distribuyen los elementos*/
-    gap: 20px;                               /*Espacios entre los hijos*/
-    padding: 20px;                           /*Coloco un espacio alrededor del conjunto de hijos*/      /*El borde no se ve */
-    margin: 20px;
+.grid-container-fauna-flora {
+  display: grid; /*Convierte el contenedor en una grilla */
+  grid-template-columns: 1fr 1fr 1fr; /*Forma en que se distribuyen los elementos*/
+  gap: 20px; /*Espacios entre los hijos*/
+  padding: 20px; /*Coloco un espacio alrededor del conjunto de hijos*/ /*El borde no se ve */
+  margin: 20px;
 }
 
 .fondo-gris {
-    background-color: #f1f1f1;
-    border-radius: 25px;
+  background-color: #f1f1f1;
+  border-radius: 25px;
 }
 
-
-.grid-container-fauna-flora img{
-    border-radius: 50%;
-    max-width: 250px;
+.grid-container-fauna-flora img {
+  border-radius: 50%;
+  max-width: 250px;
 }
 
 .descripcion {
-    background-color: #f1f1f1;
-    padding:15px;
-    border-radius: 10px;
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 10px;
 }
 
 .video {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
 }
 
 .video iframe {
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .grid-item-fauna-flora {
-    padding:15px;
-    text-align: center;
+  padding: 15px;
+  text-align: center;
 }
 
 /* HTML CONTACTO*/
 .bigicon {
-    font-size: 35px;
-    color: #36A0FF;
+  font-size: 35px;
+  color: #36a0ff;
 }
-
 
 /* /////////////////////////////////////////////////////////////////////////////// BREAKING POINT TABLET*/
 
-@media (max-width: 952px){
+@media (max-width: 952px) {
+  /* MAIN NAV*/
+  .enlace {
+    padding-left: 20px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
 
-    /* MAIN NAV*/
-    .enlace{
-        padding-left: 20px;
-    }
-    nav ul li a{
-       font-size: 16px;
-    }
+  /* DESTINOS  */
+  .grid-container-destino {
+    grid-template-columns: auto; /*Forma en que se distribuyen los elementos*/
+  }
 
-        /* DESTINOS  */
-        .grid-container-destino {
-            grid-template-columns: auto;   /*Forma en que se distribuyen los elementos*/
-        }
-
-        .grid-container-fauna-flora{
-            grid-template-columns: auto ;   /*Forma en que se distribuyen los elementos*/
-            border-radius: 0;
-        }
-    
+  .grid-container-fauna-flora {
+    grid-template-columns: auto; /*Forma en que se distribuyen los elementos*/
+    border-radius: 0;
+  }
 }
 
 /* /////////////////////////////////////////////////////////////////////////////// BREAKING POINT SMARTPHONE*/
 
-@media (max-width: 858px){
+@media (max-width: 858px) {
+  /* MAIN NAV*/
+  .checkbtn {
+    display: block;
+  }
 
-    /* MAIN NAV*/
-    .checkbtn{
-        display: block;
-    }
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #144E75;;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    nav ul li a{
-        font-size: 20px;
-        color: rgb(138, 138, 138);
-    }
-    li a:hover, li a.active{
-        background: none;
-        color: #fff;
-    }
-    #check:checked ~ ul{
-        left:0;
-    }
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #144e75;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 2048;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+    color: rgb(138, 138, 138);
+  }
+  li a:hover,
+  li a.active {
+    background: none;
+    color: #fff;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
 
-    /* HOME */
-    .grid-container {
-        grid-template-columns: auto;   /*Forma en que se distribuyen los elementos*/
-    }
+  /* HOME */
+  .grid-container {
+    grid-template-columns: auto; /*Forma en que se distribuyen los elementos*/
+  }
 
-    /* DESTINOS  */
-    .grid-container-destino {
-        grid-template-columns: auto;   /*Forma en que se distribuyen los elementos*/
-    }
+  /* DESTINOS  */
+  .grid-container-destino {
+    grid-template-columns: auto; /*Forma en que se distribuyen los elementos*/
+  }
 
-    /*  FOOTER*/
-    .grid-footer {
-        grid-template-columns: auto;   /*Forma en que se distribuyen los elementos*/
-    }
+  /*  FOOTER*/
+  .grid-footer {
+    grid-template-columns: auto; /*Forma en que se distribuyen los elementos*/
+  }
+}
+
+/* Font Size Contact Page */
+
+.contact-links {
+    justify-content: space-evenly;
+    height: 75%;
+}
+
+.contact-item {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.contact-item .contact-text {
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+.contact-text {
+  font-size: 20px;
+  color: #808080;
+}
+
+.contact-link {
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  background-color: transparent;
+  color: #333;
 }

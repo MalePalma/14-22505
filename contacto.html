@@ -1,160 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset=UTF-8>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <!-- Iconos y Favicon -->
-        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-        
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-        
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- MY CSS -->
-        <link rel="stylesheet" href="style.css">
+    <!-- Iconos y Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
 
-        <title>AR Contacto | Descubrí Argentina</title>
-    </head>
-    <body>
-        <container> 
-            <header>
-                <nav>
-                    <input type="checkbox" id="check">
-                    <label for="check" class="checkbtn">
-                        <i class="fas fa-bars"></i>
-                    </label>
-                    <a href="index.html" class="enlace">
-                        <img src="img/logo.svg" alt="" class="logo">
-                    </a>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="destinos.html">Destinos</a></li>
-                        <li><a href="institucional.html">Institucional</a></li>
-                        <li><a class="active"  href="contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div class="container">
-                         <!--Section: Contact v.2-->
-                        <section class="mb-4">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-                            <!--Section heading-->
-                            <h2 class="h1-responsive font-weight-bold my-4">Contact us</h2>
-                            <!--Section description-->
-                            <p class="w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-                                a matter of hours to help you.</p>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
-                            <div class="row atras">
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="style.css" />
 
-                                <!--Grid column-->
-                                <div class="col-md-9 mb-md-0 mb-5">
-                                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+    <title>AR Contacto | Descubrí Argentina</title>
+  </head>
 
-                                        <!--Grid row-->
-                                        <div class="row">
+  <body>
+    <header class="mb-3">
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <a href="index.html" class="navbar-brand">
+          <img src="img/logo.svg" alt="Logo" class="logo" />
+        </a>
+        <ul class="contact-navbar">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="destinos.html">Destinos</a></li>
+          <li><a href="institucional.html">Institucional</a></li>
+          <li><a class="active" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
 
-                                            <!--Grid column-->
-                                            <div class="col-md-6">
-                                                <div class="md-form mb-0">
-                                                    <input type="text" id="name" name="name" class="form-control">
-                                                    <label for="name" class="">Your name</label>
-                                                </div>
-                                            </div>
-                                            <!--Grid column-->
+    <main class="mb-3">
+      <h2 class="text-center">Contact us</h2>
+      <p class="w-50 mx-auto mb-3">
+        Do you have any questions? Please do not hesitate to contact us
+        directly.
+        <br />
+        Our team will come back to you within a matter of hours to help you.
+      </p>
 
-                                            <!--Grid column-->
-                                            <div class="col-md-6">
-                                                <div class="md-form mb-0">
-                                                    <input type="text" id="email" name="email" class="form-control">
-                                                    <label for="email" class="">Your email</label>
-                                                </div>
-                                            </div>
-                                            <!--Grid column-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 p-3">
+            <form method="POST" id="message-form">
+              <div class="form-group">
+                <label for="name">Your name</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
 
-                                        </div>
-                                        <!--Grid row-->
+              <div class="form-group">
+                <label for="email">Your email</label>
+                <input
+                  class="form-control"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="email@example.com"
+                  required
+                />
+              </div>
 
-                                        <!--Grid row-->
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="md-form mb-0">
-                                                    <input type="text" id="subject" name="subject" class="form-control">
-                                                    <label for="subject" class="">Subject</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--Grid row-->
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select
+                  name="subject"
+                  id="subject"
+                  class="form-control"
+                  required
+                >
+                  <option value="Destinos">Destinos</option>
+                  <option value="Flora">Flora</option>
+                  <option value="Fauna">Fauna</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
 
-                                        <!--Grid row-->
-                                        <div class="row">
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  class="form-control"
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="5"
+                  placeholder="Hola... me gustaria saber"
+                  required
+                ></textarea>
+              </div>
 
-                                            <!--Grid column-->
-                                            <div class="col-md-12">
+              <input
+                type="hidden"
+                name="company"
+                value="consultas@descubriargentina.com"
+              />
 
-                                                <div class="md-form">
-                                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                                                    <label for="message">Your message</label>
-                                                </div>
+              <button class="btn" type="submit">Enviar mensaje</button>
+            </form>
+          </div>
 
-                                            </div>
-                                        </div>
-                                        <!--Grid row-->
+          <div class="col-md-6 p-3">
+            <ul class="contact-links d-flex flex-column">
+              <li class="contact-item">
+                <i class="fas fa-map-marker-alt fa-2x"></i>
+                <span class="contact-text">Av. Santa Fe 873, CABA</span>
+              </li>
+              <li class="contact-item">
+                <i class="fas fa-phone fa-2x"></i>
+                <a href="tel:+54 234 567 89" class="contact-text contact-link"
+                  >+ 54 234 567 89</a
+                >
+              </li>
+              <li class="contact-item">
+                <i class="fas fa-envelope fa-2x"></i>
+                <a
+                  href="mailto:info@turismo.gob.ar"
+                  class="contact-text contact-link"
+                  >info@turismo.gob.ar</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
 
-                                    </form>
+    <footer>
+      <div class="grid-footer">
+        <div class="grid-item-footer">
+          <h4>Términos y Condiciones</h4>
+          <a href="#">Terminos y Condiciones</a>
+        </div>
+        <div class="grid-item-footer">
+          <h4>Links de interés</h4>
+          <a href="#">Políticas de Privacidad</a>
+        </div>
+        <div class="grid-item-footer">
+          <h4>Dónde estamos</h4>
+          <a href="mailto:info@turismo.gob.ar">info@turismo.gob.ar</a>
+        </div>
+      </div>
+    </footer>
 
-                                    <div class="text-center text-md-left">
-                                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
-                                    </div>
-                                    <div class="status"></div>
-                                </div>
-                                <!--Grid column-->
-
-                                <!--Grid column-->
-                                <div class="col-md-3 text-center">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                                            <p>C.A.B.A, Argentina</p>
-                                        </li>
-
-                                        <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                                            <p>+ 54 234 567 89</p>
-                                        </li>
-
-                                        <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                                            <p>info@turismo.gob.ar</p>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!--Grid column-->
-
-                            </div>
-
-                        </section>
-                        <!--Section: Contact v.2-->
-                    </div>
-            <footer>
-                <div class="grid-footer">
-                    <div class="grid-item-footer">
-                        <h4>Términos y Condiciones</h4>
-                        <a href="#">Terminos y Condiciones</a>
-                    </div>
-                    <div class="grid-item-footer">
-                        <h4>Links de interés</h4>
-                        <a href="#">Políticas de Privacidad</a>
-                    </div>
-                    <div class="grid-item-footer">
-                        <h4>Dónde estamos</h4>
-                        <a href="mailto:info@turismo.gob.ar">info@turismo.gob.ar</a>
-                    </div>
-                </div>
-            </footer>
-        </container>
-    </body>
+    <script src="./scripts/contacto.js"></script>
+  </body>
 </html>
