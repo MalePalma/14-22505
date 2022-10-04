@@ -1,4 +1,4 @@
-/* SELECTOR UNIVERSAL*/
+https://github.com/cecibertolo/14-22505/blob/master/style.css/* SELECTOR UNIVERSAL*/
 
 * {
   padding: 0;
@@ -50,6 +50,8 @@ p {
   color: #808080;
   font-weight: 400;
   padding: 10px 0 10px 0px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 a {
