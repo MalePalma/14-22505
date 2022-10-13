@@ -1,99 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset=UTF-8>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-        
-        <title>AR Destinos | Descubrí Argentina</title>
-    </head>
-    <body>
-        <container> 
-            <header>
-                <nav>
-                    <input type="checkbox" id="check">
-                    <label for="check" class="checkbtn">
-                        <i class="fas fa-bars"></i>
-                    </label>
-                    <a href="index.html" class="enlace">
-                        <img src="img/logo.svg" alt="" class="logo">
-                    </a>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a class="active" href="destinos.html">Destinos</a></li>
-                        <li><a href="institucional.html">Institucional</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <img class="encabezado" src="img/header-esteros-ibera.jpg" alt="Esteros del Iberá">
-            <section class="container">
-                <h1>Esteros del Iberá</h1>
-                <div class="grid-container-destino">
-                    <div class="video">
-                        <iframe src="https://www.youtube.com/embed/8Y6eGFI_NQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="descripcion">
-                        <h2>Valle de la Luna</h2>
-                        <img src="" alt="Cataratas">
-                    </div>
-                </div>
-                <h3>Fauna</h3>
-                <div class="grid-container-fauna-flora fondo-gris">
-                    <div class="grid-item-fauna-flora">
-                        <img src="img/fauna-jaguarete.jpg" alt="Cataratas">
-                        <h2>Jaguareté</h2>
-                    </div>
-                    <div class="grid-item-fauna-flora">
-                        <img src="img/fauna-carpincho.jpg" alt="Carpincho">
-                        <h2>Carpincho</h2>
-                    </div>
-                    <div class="grid-item-fauna-flora">
-                        <img src="img/fauna-ciervo.jpg" alt="Ciervo">
-                        <h2>Ciervo</h2>
-                    </div>
-                </div>
-                <h3>Flora</h3>
-                <div class="grid-container-fauna-flora">
-                    <div class="grid-item-fauna-flora">
-                        <img src="img/flora-flecha-agua.jpg" alt="Fecha del Agua en Flor">
-                        <h2>Fecha del Agua</h2>
-                    </div>
-                    <div class="grid-item-fauna-flora">
-                        <img src="img/flora-irupe.jpg" alt="Irupé">
-                        <h2>Irupé</h2>
-                    </div>
-                    <div class="grid-item-fauna-flora">
-                        <img src="img/flora-santa-lucia.jpg" alt="Santa Lucía">
-                        <h2>Santa Lucía</h2>
-                    </div>
-                </div>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
 
-            </section>
-            <footer>
-                <div class="grid-footer">
-                    <div class="grid-item-footer">
-                        <h4>Términos y Condiciones</h4>
-                        <a href="#">Terminos y Condiciones</a>
-                    </div>
-                    <div class="grid-item-footer">
-                        <h4>Links de interés</h4>
-                        <a href="#">Políticas de Privacidad</a>
-                    </div>
-                    <div class="grid-item-footer">
-                        <h4>Dónde estamos</h4>
-                        <a href="mailto:info@turismo.gob.ar">info@turismo.gob.ar</a>
-                    </div>
-                </div>
-            </footer>
-        </container>
-    </body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>AR Destinos | Descubrí Argentina</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <a href="index.html" class="enlace">
+            <img src="img/logo.svg" alt="" class="logo" />
+          </a>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a class="active" href="destinos.html">Destinos</a></li>
+            <li><a href="institucional.html">Institucional</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main id="main-content">
+        <h1 class="text-center">
+          Algunos de los destinos que tenemos para ofrecer
+        </h1>
+        <ul id="region-selector"></ul>
+      </main>
+
+      <footer>
+        <div class="grid-footer">
+          <div class="grid-item-footer">
+            <h4>Términos y Condiciones</h4>
+            <a href="#">Terminos y Condiciones</a>
+          </div>
+          <div class="grid-item-footer">
+            <h4>Links de interés</h4>
+            <a href="#">Políticas de Privacidad</a>
+          </div>
+          <div class="grid-item-footer">
+            <h4>Dónde estamos</h4>
+            <a href="mailto:info@turismo.gob.ar">info@turismo.gob.ar</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <template id="region-template">
+      <article class="destino container" id="">
+        <section class="grid-container-destino">
+          <div class="video">
+            <iframe
+              class="region-video"
+              src=""
+              title="Youtube Player"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture allowscriptaccess=always"
+            ></iframe>
+          </div>
+
+          <div class="descripcion">
+            <h2 class="region-title"></h2>
+            <p class="region-description"></p>
+            <img class="region-description-img" src="" alt="" />
+            <!-- Imagen decorativa, el alt va vacio-->
+          </div>
+        </section>
+
+        <section class="fauna-section fondo-gris">
+          <h2>Fauna</h2>
+          <div class="grid-container-fauna-flora"></div>
+        </section>
+
+        <section class="flora-section">
+          <h2>Flora</h2>
+          <div class="grid-container-fauna-flora"></div>
+        </section>
+
+        <section class="forecast-section">
+          <h2>Clima</h2>
+          <p>
+            Datos provenientes de:
+            <a href="https://open-meteo.com/en">Open Meteo 🌤</a>
+          </p>
+          <div class="grid-container-fauna-flora"></div>
+        </section>
+      </article>
+    </template>
+
+    <script type="module" src="./src/scripts/destinos.js"></script>
+  </body>
 </html>

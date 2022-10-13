@@ -1,4 +1,4 @@
-https://github.com/cecibertolo/14-22505/blob/master/style.css/* SELECTOR UNIVERSAL*/
+/* SELECTOR UNIVERSAL*/
 
 * {
   padding: 0;
@@ -8,6 +8,10 @@ https://github.com/cecibertolo/14-22505/blob/master/style.css/* SELECTOR UNIVERS
   box-sizing: border-box;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+}
 
 body,
 p,
@@ -62,6 +66,10 @@ a {
 a:hover {
   color: rgb(182, 182, 170);
   text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* --------------------------------------- MAIN NAV*/
@@ -184,6 +192,15 @@ footer {
   width: 100%;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container #main-content {
+  flex: 1;
+}
 /* +++++++++++++++++++++++  HOME ++++++++++++++++++++++ */
 
 .container {
@@ -226,7 +243,7 @@ footer {
 
 .grid-container-fauna-flora {
   display: grid; /*Convierte el contenedor en una grilla */
-  grid-template-columns: 1fr 1fr 1fr; /*Forma en que se distribuyen los elementos*/
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px; /*Espacios entre los hijos*/
   padding: 20px; /*Coloco un espacio alrededor del conjunto de hijos*/ /*El borde no se ve */
   margin: 20px;
@@ -268,15 +285,101 @@ footer {
   text-align: center;
 }
 
+#region-selector {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+#region-selector button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#region-selector button:hover {
+  text-decoration: underline;
+}
+
+.destino {
+ display: none;
+ visibility: hidden;
+}
+
+.destino.visible {
+  display: block;
+  visibility: visible;
+}
+
+.destino section {
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.region-description-img {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.grid-container-fauna-flora figure {
+  font-size: 21px;
+  color: #1c6ea4;
+  font-weight: 600;
+  text-align: center;
+}
+
+.grid-container-fauna-flora figure img {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  object-fit: cover;
+}
+
 /* HTML CONTACTO*/
 .bigicon {
   font-size: 35px;
   color: #36a0ff;
 }
+.contact-links {
+  justify-content: space-evenly;
+  height: 75%;
+}
+
+.contact-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.contact-item .contact-text {
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+.contact-text {
+  font-size: 20px;
+  color: #808080;
+}
+
+.contact-link {
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  background-color: transparent;
+  color: #333;
+}
 
 /* /////////////////////////////////////////////////////////////////////////////// BREAKING POINT TABLET*/
 
-@media (max-width: 952px) {
+@media (max-width: 980px) {
   /* MAIN NAV*/
   .enlace {
     padding-left: 20px;
@@ -293,6 +396,12 @@ footer {
   .grid-container-fauna-flora {
     grid-template-columns: auto; /*Forma en que se distribuyen los elementos*/
     border-radius: 0;
+  }
+
+  #region-selector {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -350,33 +459,3 @@ footer {
 }
 
 /* Font Size Contact Page */
-
-.contact-links {
-    justify-content: space-evenly;
-    height: 75%;
-}
-
-.contact-item {
-    display: flex;
-    width: 100%;
-    align-items: center;
-}
-
-.contact-item .contact-text {
-    flex-grow: 1;
-    padding: 0 20px;
-}
-
-.contact-text {
-  font-size: 20px;
-  color: #808080;
-}
-
-.contact-link {
-  text-decoration: none;
-}
-
-.contact-link:hover {
-  background-color: transparent;
-  color: #333;
-}
