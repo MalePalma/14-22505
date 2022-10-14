@@ -198,9 +198,22 @@ footer {
   min-height: 100vh;
 }
 
-.main-container #main-content {
+main {
   flex: 1;
 }
+
+.visible {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.invisible {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
 /* +++++++++++++++++++++++  HOME ++++++++++++++++++++++ */
 
 .container {
@@ -286,31 +299,28 @@ footer {
 }
 
 #region-selector {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr) );
+  place-items: center;
+  gap: 5px;
 }
 
 #region-selector button {
+  padding: 5px;
   background-color: transparent;
   border: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 18px;
+}
+
+#region-selector button.selected {
+  background-color:#1c6ea4;
+  color: white;
+  padding: 5px;
 }
 
 #region-selector button:hover {
   text-decoration: underline;
-}
-
-.destino {
- display: none;
- visibility: hidden;
-}
-
-.destino.visible {
-  display: block;
-  visibility: visible;
 }
 
 .destino section {
@@ -325,7 +335,6 @@ footer {
   height: 400px;
   object-fit: cover;
   object-position: center;
-
 }
 
 .grid-container-fauna-flora figure {
@@ -398,11 +407,6 @@ footer {
     border-radius: 0;
   }
 
-  #region-selector {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 /* /////////////////////////////////////////////////////////////////////////////// BREAKING POINT SMARTPHONE*/

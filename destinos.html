@@ -22,55 +22,56 @@
     <title>AR Destinos | Descubrí Argentina</title>
   </head>
   <body>
-    <div class="main-container">
-      <header>
-        <nav>
-          <input type="checkbox" id="check" />
-          <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-          </label>
-          <a href="index.html" class="enlace">
-            <img src="img/logo.svg" alt="" class="logo" />
-          </a>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a class="active" href="destinos.html">Destinos</a></li>
-            <li><a href="institucional.html">Institucional</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
+    <header>
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <a href="index.html" class="enlace">
+          <img src="img/logo.svg" alt="" class="logo" />
+        </a>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a class="active" href="destinos.html">Destinos</a></li>
+          <li><a href="institucional.html">Institucional</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <main id="main-content">
+    <div class="main-container">
+      <main>
         <h1 class="text-center">
           Algunos de los destinos que tenemos para ofrecer
         </h1>
         <ul id="region-selector"></ul>
       </main>
-
-      <footer>
-        <div class="grid-footer">
-          <div class="grid-item-footer">
-            <h4>Términos y Condiciones</h4>
-            <a href="#">Terminos y Condiciones</a>
-          </div>
-          <div class="grid-item-footer">
-            <h4>Links de interés</h4>
-            <a href="#">Políticas de Privacidad</a>
-          </div>
-          <div class="grid-item-footer">
-            <h4>Dónde estamos</h4>
-            <a href="mailto:info@turismo.gob.ar">info@turismo.gob.ar</a>
-          </div>
-        </div>
-      </footer>
     </div>
+
+    <footer>
+      <div class="grid-footer">
+        <div class="grid-item-footer">
+          <h4>Términos y Condiciones</h4>
+          <a href="#">Terminos y Condiciones</a>
+        </div>
+        <div class="grid-item-footer">
+          <h4>Links de interés</h4>
+          <a href="#">Políticas de Privacidad</a>
+        </div>
+        <div class="grid-item-footer">
+          <h4>Dónde estamos</h4>
+          <a href="mailto:info@turismo.gob.ar">info@turismo.gob.ar</a>
+        </div>
+      </div>
+    </footer>
 
     <template id="region-template">
       <article class="destino container" id="">
         <section class="grid-container-destino">
           <div class="video">
             <iframe
+              loading="lazy"
               class="region-video"
               src=""
               title="Youtube Player"
@@ -82,7 +83,7 @@
           <div class="descripcion">
             <h2 class="region-title"></h2>
             <p class="region-description"></p>
-            <img class="region-description-img" src="" alt="" />
+            <img class="region-description-img" src="" alt="" loading="lazy" />
             <!-- Imagen decorativa, el alt va vacio-->
           </div>
         </section>
