@@ -40,14 +40,12 @@
       </nav>
     </header>
 
-    <div class="main-container">
-      <main>
-        <h1 class="text-center">
-          Algunos de los destinos que tenemos para ofrecer
-        </h1>
-        <ul id="region-selector"></ul>
-      </main>
-    </div>
+    <main>
+      <h1 class="text-center">
+        Algunos de los destinos que tenemos para ofrecer
+      </h1>
+      <ul id="region-selector"></ul>
+    </main>
 
     <footer>
       <div class="grid-footer">
@@ -67,19 +65,19 @@
     </footer>
 
     <template id="region-template">
-      <article class="destino container" id="">
-        <section class="grid-container-destino">
+      <article class="destino">
+        <section class="grid-container">
           <div class="video">
             <iframe
               class="region-video"
               src=""
               title="Youtube Player"
               frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture allowscriptaccess=always"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture allowscriptaccess=always"
             ></iframe>
           </div>
 
-          <div class="descripcion">
+          <div class="descripcion vertical-centered">
             <h2 class="region-title"></h2>
             <p class="region-description"></p>
             <img class="region-description-img" src="" alt="" />
@@ -87,23 +85,23 @@
           </div>
         </section>
 
-        <section class="fauna-section fondo-gris">
+        <section class="vertical-centered fondo-gris">
           <h2>Fauna</h2>
-          <div class="grid-container-fauna-flora"></div>
+          <div class="fauna region-items"></div>
         </section>
 
-        <section class="flora-section">
+        <section class="vertical-centered">
           <h2>Flora</h2>
-          <div class="grid-container-fauna-flora"></div>
+          <div class="flora region-items"></div>
         </section>
 
-        <section class="forecast-section">
+        <section class="vertical-centered">
           <h2>Clima</h2>
           <p>
             Datos provenientes de:
             <a href="https://open-meteo.com/en">Open Meteo 🌤</a>
           </p>
-          <div class="grid-container-fauna-flora"></div>
+          <div class="clima region-items"></div>
         </section>
       </article>
     </template>

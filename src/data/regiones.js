@@ -1,7 +1,7 @@
 const regiones = [
   {
     titulo: "Cataratas del Iguazú",
-    video: "https://www.youtube.com/embed/9lfMb20QLXg?enablejsapi=1",
+    video: "https://www.youtube.com/embed/9lfMb20QLXg",
     descripcion: {
       contenido:
         "Las Cataratas de Iguazú fueron elegias como una de las «Siete maravillas naturales del mundo». Este conjunto de cataratas, formadas por 275 saltos, se encuentran al límite entre la provincia de Misiones y el Estado Brasileño de Parná.",
@@ -83,7 +83,7 @@ const regiones = [
   },
   {
     titulo: "Esteros del Iberá",
-    video: "https://www.youtube.com/embed/8Y6eGFI_NQI?enablejsapi=1",
+    video: "https://www.youtube.com/embed/8Y6eGFI_NQI",
     descripcion: {
       contenido:
         "La Reserva Provincial del Iberá es un área protegida dentro de los extensos Esteros del Iberá, en el noreste de Argentina. Abarca pantanos, ciénagas y lagunas que se extienden al suroeste desde la ciudad de Ituzaingó hasta Chavarría.",
@@ -124,7 +124,7 @@ const regiones = [
   },
   {
     titulo: "Glaciar Perito Moreno",
-    video: "https://www.youtube.com/embed/J0SMosOsQoA?enablejsapi=1",
+    video: "https://www.youtube.com/embed/J0SMosOsQoA",
     descripcion: {
       contenido:
         "El Calafate se encuentra al borde del Campo de Hielo Patagónico Sur en la provincia de Santa Cruz. Es el acceso al Parque Nacional Los Glaciares, hogar del enorme glaciar Perito Moreno, cuyo dinámico paisaje de hielo es popular para el turismo.",
@@ -288,7 +288,7 @@ const regiones = [
   },
   {
     titulo: "Península de Valdés",
-    video: "https://www.youtube.com/embed/RlliTKoLRBg?enablejsapi=1",
+    video: "https://www.youtube.com/embed/RlliTKoLRBg",
     descripcion: {
       contenido:
         "Península de Valdés es una reserva de la naturaleza patagónica, en la costa de Argentina. Es conocida por los animales marinos que habitan en el mar y las playas circundantes, como ballenas, lobos y elefantes marinos.",
@@ -370,7 +370,7 @@ const regiones = [
   },
   {
     titulo: "Siete Lagos",
-    video: "https://www.youtube.com/embed/UazmOWeHSPI?enablejsapi=1",
+    video: "https://www.youtube.com/embed/UazmOWeHSPI",
     descripcion: {
       contenido:
         "En San Carlos Bariloche se encuentra la famosa Ruta de los Siete Lagos que inicia en San Martín de los Andes y llega a Villa la Angostura. Ideal para el excursionismo y el esquí de montaña en invierno.",
@@ -452,7 +452,7 @@ const regiones = [
   },
   {
     titulo: "Valle de la luna",
-    video: "https://www.youtube.com/embed/OfelcybWSFY?enablejsapi=1",
+    video: "https://www.youtube.com/embed/OfelcybWSFY",
     descripcion: {
       contenido:
         "El Valle de la Luna pertenece al Parque Natural Provincial Ischigualasto, que se encuentra a 80 km. de San Agustín del Valle Fértil. El circuito del Valle de la Luna tiene aproximadamente 40km y realiza en vehículo alrededor de 3 hrs.",
@@ -493,4 +493,4 @@ const regiones = [
   },
 ];
 
-export default regiones;
+export default regiones.map((region, index) => ({ id: index, ...region }));

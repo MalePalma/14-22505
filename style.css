@@ -54,8 +54,6 @@ p {
   color: #808080;
   font-weight: 400;
   padding: 10px 0 10px 0px;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 a {
@@ -192,14 +190,15 @@ footer {
   width: 100%;
 }
 
-.main-container {
+.vertical-centered {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
-  flex: 1;
+  padding: 30px;
 }
 
 .visible {
@@ -246,20 +245,34 @@ main {
 
 /* +++++++++++++++++++++++  DESTINOS ++++++++++++++++++++++ */
 
-.grid-container-destino {
-  display: grid; /*Convierte el contenedor en una grilla */
-  grid-template-columns: 2fr 1fr; /*Forma en que se distribuyen los elementos*/
-  gap: 20px; /*Espacios entre los hijos*/
-  padding: 20px; /*Coloco un espacio alrededor del conjunto de hijos*/ /*El borde no se ve */
-  margin-bottom: 25px;
+#region-selector { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    place-items: center;
+    justify-items: center;
+    margin: 0 auto 30px auto; 
+    gap: 15px;
 }
 
-.grid-container-fauna-flora {
-  display: grid; /*Convierte el contenedor en una grilla */
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px; /*Espacios entre los hijos*/
-  padding: 20px; /*Coloco un espacio alrededor del conjunto de hijos*/ /*El borde no se ve */
-  margin: 20px;
+#region-selector button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#region-selector button.selected {
+  color: rgb(248, 248, 248);
+  background: #1c6ea4;
+}
+
+.destino .grid-container {
+   grid-template-columns: 1fr 1fr;
+   padding: 0;
+}
+
+.destino section {
+   margin-bottom: 45px;
 }
 
 .fondo-gris {
@@ -267,22 +280,18 @@ main {
   border-radius: 25px;
 }
 
-.grid-container-fauna-flora img {
-  border-radius: 50%;
-  max-width: 250px;
-}
-
 .descripcion {
   background-color: #f1f1f1;
-  padding: 15px;
+  padding: 20px;
   border-radius: 10px;
 }
 
 .video {
   position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
   overflow: hidden;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
 }
 
 .video iframe {
@@ -293,62 +302,41 @@ main {
   height: 100%;
 }
 
-.grid-item-fauna-flora {
-  padding: 15px;
-  text-align: center;
-}
-
-#region-selector {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr) );
-  place-items: center;
-  gap: 5px;
-}
-
-#region-selector button {
-  padding: 5px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-#region-selector button.selected {
-  background-color:#1c6ea4;
-  color: white;
-  padding: 5px;
-}
-
-#region-selector button:hover {
-  text-decoration: underline;
-}
-
-.destino section {
-  margin-bottom: 30px;
-  padding: 20px;
-}
-
 .region-description-img {
   display: block;
-  margin: 0 auto;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   object-position: center;
 }
 
-.grid-container-fauna-flora figure {
-  font-size: 21px;
+.region-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.region-items figure {
+  font-size: 20px;
   color: #1c6ea4;
   font-weight: 600;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.grid-container-fauna-flora figure img {
+.region-items img {
+  display: block;
   width: 200px;
   height: 200px;
-  display: inline-block;
   object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.region-items .forecast {
+   margin: 30px;
 }
 
 /* HTML CONTACTO*/
@@ -406,7 +394,6 @@ main {
     grid-template-columns: auto; /*Forma en que se distribuyen los elementos*/
     border-radius: 0;
   }
-
 }
 
 /* /////////////////////////////////////////////////////////////////////////////// BREAKING POINT SMARTPHONE*/
@@ -452,13 +439,14 @@ main {
   }
 
   /* DESTINOS  */
-  .grid-container-destino {
+  .destino .grid-container {
     grid-template-columns: auto; /*Forma en que se distribuyen los elementos*/
   }
 
   /*  FOOTER*/
   .grid-footer {
     grid-template-columns: auto; /*Forma en que se distribuyen los elementos*/
+    width: 100%;
   }
 }
 

@@ -1,53 +1,35 @@
 import climas from "../data/climas.js";
+import regiones from "../data/regiones.js";
 
-function createHTMLRegions(regions) {
+
+async function createHTMLRegion(selectedId) {
 
     const template = document.getElementById("region-template");
-    const container = document.querySelector(".main-container main");
-    const regionSelector = document.getElementById("region-selector");
-    const regionSelected = sessionStorage.getItem("regionSelected") || regions[0].titulo;
+    const prevRegion = document.querySelector(".destino");
+    const main = document.querySelector("main");
+
+    const region = regiones.find(region => region.id == selectedId);
+    const node = template.content.cloneNode(true);
+
+    const wildlife = createHTMLImages(region.fauna);
+    const plants = createHTMLImages(region.flora);
+    const forecasts = await createHTMLForecast(region.coordenadas.lat, region.coordenadas.long);
+
+    node.querySelector(".region-video").setAttribute("src", region.video);
+    node.querySelector(".region-title").textContent = region.titulo;
+    node.querySelector(".region-description").textContent = region.descripcion.contenido;
+    node.querySelector(".region-description-img").setAttribute("src", region.descripcion.img);
+
+    node.querySelector(".fauna").append(wildlife);
+    node.querySelector(".flora").append(plants);
+    node.querySelector(".clima").append(forecasts);
 
 
-    regions.forEach(async (region) => {
+    if (prevRegion) {
+        prevRegion.remove()
+    }
 
-        const node = template.content.cloneNode(true);
-        const isSelected = region.titulo === regionSelected;
-
-
-        const wildlife = createHTMLImages(region.fauna);
-        const plants = createHTMLImages(region.flora);
-        const forecasts = await createHTMLForecast(region.coordenadas.lat, region.coordenadas.long);
-
-
-        const item = createRegionMenuItem(region.titulo, isSelected);
-
-
-        node.querySelector(".region-video").setAttribute("src", region.video);
-        node.querySelector(".region-title").textContent = region.titulo;
-        node.querySelector(".region-description").textContent = region.descripcion.contenido;
-        node.querySelector(".region-description-img").setAttribute("src", region.descripcion.img);
-
-
-        node.querySelector(".fauna-section .grid-container-fauna-flora").append(wildlife);
-        node.querySelector(".flora-section .grid-container-fauna-flora").append(plants);
-        node.querySelector(".forecast-section .grid-container-fauna-flora").append(forecasts);
-
-
-        node.querySelector(".destino").setAttribute("id", region.titulo);
-
-
-        if (isSelected) {
-            node.querySelector(".destino").classList.add("visible");
-        } else {
-            node.querySelector(".destino").classList.add("invisible");
-        }
-
-
-        regionSelector.append(item);
-        container.append(node);
-    })
-
-
+    main.append(node);
 
     async function createHTMLForecast(lat, lon) {
 
@@ -87,14 +69,13 @@ function createHTMLRegions(regions) {
             htmlTime.textContent = time;
             htmlTime.setAttribute("datetime", time);
 
-
+            container.classList.add("forecast");
             container.append(htmlTime, htmlWeather, htmlMin, htmlMax);
             fragment.append(container);
         });
 
         return fragment;
     }
-
 
     function createHTMLImages(items) {
         const fragment = document.createDocumentFragment();
@@ -120,47 +101,45 @@ function createHTMLRegions(regions) {
     }
 
 
-    function createRegionMenuItem(regionTitle, isSelected) {
+}
+
+function createRegionsMenu(storedRegion) {
+
+    const regionSelector = document.getElementById("region-selector");
+    const fragment = document.createDocumentFragment();
+
+    regiones.forEach((region) => {
 
         const li = document.createElement("li");
         const button = document.createElement("button");
 
-        button.setAttribute("value", regionTitle);
-        button.textContent = regionTitle;
+        button.setAttribute("value", region.id);
+        button.setAttribute("id", region.titulo);
+        button.textContent = region.titulo;
 
-        if (isSelected) {
+        if (region.id == storedRegion) {
             button.classList.add("selected");
         }
 
+        button.addEventListener("click", async (event) => {
 
-        button.addEventListener("click", (event) => {
-
-            const regionToShow = document.getElementById(event.target.value);
-
-            const currentVisibleRegion = document.querySelector(".destino.visible");
             const currentSelectedButton = document.querySelector("#region-selector button.selected");
 
-            const iframes = [...document.querySelectorAll("iframe")];
-            const pauseCommand = JSON.stringify({ event: "command", func: "stopVideo" });
-
-            iframes.forEach((iframe) => iframe.contentWindow.postMessage(pauseCommand, "*"));
-
-            if (currentVisibleRegion && currentSelectedButton) {
-                currentVisibleRegion.classList.replace("visible", "invisible")
+            if (currentSelectedButton.value != event.target.value) {
                 currentSelectedButton.classList.remove("selected");
+                await createHTMLRegion(event.target.value);
+                event.target.classList.add("selected");
+                sessionStorage.setItem("selectedRegion", event.target.value);
             }
 
-            regionToShow.classList.replace("invisible", "visible");
-            event.target.classList.add("selected");
-
-            sessionStorage.setItem("regionSelected", regionTitle);
         });
 
         li.append(button);
-        return li
-    }
-}
+        fragment.append(li);
+    })
 
+    regionSelector.append(fragment);
+}
 
 
 function createHTMLRegionsCards(regions, showDistance = false) {
@@ -177,7 +156,7 @@ function createHTMLRegionsCards(regions, showDistance = false) {
         node.querySelector(".region-card-img").setAttribute("src", region.descripcion.img);
         node.querySelector(".region-card-img").setAttribute("alt", region.titulo);
         node.querySelector(".region-card-content").textContent = region.descripcion.contenido;
-        node.querySelector(".region-card-link").setAttribute("value", region.titulo);
+        node.querySelector(".region-card-link").setAttribute("value", region.id);
 
 
         if (showDistance) {
@@ -186,7 +165,7 @@ function createHTMLRegionsCards(regions, showDistance = false) {
         }
 
         node.querySelector(".region-card-link").addEventListener("click", (event) => {
-            sessionStorage.setItem("regionSelected", event.target.value);
+            sessionStorage.setItem("selectedRegion", event.target.value);
             window.location.assign("./destinos.html");
         });
 
@@ -196,4 +175,4 @@ function createHTMLRegionsCards(regions, showDistance = false) {
     container.append(fragment);
 }
 
-export { createHTMLRegionsCards, createHTMLRegions };
+export { createHTMLRegionsCards, createRegionsMenu, createHTMLRegion };
