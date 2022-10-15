@@ -181,7 +181,7 @@ function createHTMLRegionsCards(regions) {
 
         node.querySelector(".region-card-link").addEventListener("click", (event) => {
             sessionStorage.setItem("regionSelected", event.target.value);
-            window.location.assign("/destinos.html");
+            window.location.assign("./destinos.html");
         });
 
         fragment.append(node);
