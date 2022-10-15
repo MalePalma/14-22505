@@ -45,6 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const closestRegions = regions.filter(region => region.dist < medianDist).sort((r1, r2) => r1.dist - r2.dist).slice(0, TOP);
 
         createHTMLRegionsCards(closestRegions, true);
+        document.getElementById("main-title").textContent = "Destinos cercanos a vos";
+        document.getElementById("closest-region-hint").classList.replace("visible", "invisible");
     };
 
     const renderTopRegions = () => {
