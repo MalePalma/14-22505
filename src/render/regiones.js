@@ -163,7 +163,7 @@ function createHTMLRegions(regions) {
 
 
 
-function createHTMLRegionsCards(regions) {
+function createHTMLRegionsCards(regions, showDistance = false) {
 
     const template = document.getElementById("region-card-template");
     const fragment = document.createDocumentFragment();
@@ -178,6 +178,12 @@ function createHTMLRegionsCards(regions) {
         node.querySelector(".region-card-img").setAttribute("alt", region.titulo);
         node.querySelector(".region-card-content").textContent = region.descripcion.contenido;
         node.querySelector(".region-card-link").setAttribute("value", region.titulo);
+
+
+        if (showDistance) {
+            node.querySelector(".region-card-distance-container").classList.replace("invisible", "visible");
+            node.querySelector(".region-card-distance").textContent = `${region.dist} km`
+        }
 
         node.querySelector(".region-card-link").addEventListener("click", (event) => {
             sessionStorage.setItem("regionSelected", event.target.value);
