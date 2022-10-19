@@ -374,6 +374,22 @@ main {
   color: #333;
 }
 
+
+.validator {
+  color: red;
+}
+
+/* +++++++++++++++++++++++  INSTITUCIONAL ++++++++++++++++++++++ */
+
+.institucional section {
+    min-height: 200px;
+    max-width: 100%;
+    width: 500px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+
 /* /////////////////////////////////////////////////////////////////////////////// BREAKING POINT TABLET*/
 
 @media (max-width: 980px) {

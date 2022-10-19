@@ -63,19 +63,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 p-3">
-            <form method="POST" id="message-form">
-              <div class="form-group">
-                <label for="name">Nombre</label>
-                <input
-                  class="form-control"
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Nombre"
-                  required
-                />
-              </div>
-
+            <form method="POST" id="message-form" novalidate>
               <div class="form-group">
                 <label for="email">E-mail</label>
                 <input
@@ -84,18 +72,16 @@
                   name="email"
                   id="email"
                   placeholder="email@ejemplo.com"
+                  minlength="3"
+                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
                   required
                 />
+                <span id="email-feedback" class="validator"></span>
               </div>
 
               <div class="form-group">
                 <label for="subject">Tipo de consulta</label>
-                <select
-                  name="subject"
-                  id="subject"
-                  class="form-control"
-                  required
-                >
+                <select name="subject" id="subject" class="form-control">
                   <option value="Destinos">Destinos</option>
                   <option value="Flora">Flora</option>
                   <option value="Fauna">Fauna</option>
@@ -114,6 +100,7 @@
                   placeholder="Hola... me gustaria saber"
                   required
                 ></textarea>
+                <span id="message-feedback" class="validator"></span>
               </div>
 
               <input
